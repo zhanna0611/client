@@ -4,15 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-    @GetMapping("/")
-    public String home() {
+    @GetMapping("/about")
+    public String about() {
 
-        return "home";
+        return "about";
     }
-    @GetMapping("/main")
-    public String main() {
-
-        return "main";
-    }
-
 }
