@@ -219,15 +219,14 @@
 											<div class="form-group">
 												<label for="date">Date:</label>
 												<div class="form-field">
-													<i class="icon icon-calendar2"></i>
-													<input type="text" class="form-control date" th:field="*{date}"/>
+													<input type="date"  th:field="*{date}"/>
 													<span style="color:red;" class="validationError"
 														  th:if="${#fields.hasErrors('date')}"
 														  th:errors="*{date}">Date Error</span>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6 animate-box">
+										<!--<div class="col-md-6 animate-box">
 											<div class="form-group">
 												<label for="time">Time</label>
 												<div class="form-field">
@@ -269,19 +268,20 @@
 													</select>
 												</div>
 											</div>
-										</div>
+										</div>-->
 										<div class="col-md-6 animate-box">
 											<div class="form-group">
 												<label for="person">Person</label>
 												<div class="form-field">
-													<i class="icon icon-arrow-down3"></i>
+                                                    <input type="text" class="form-control"  th:field="*{person}"/>
+													<!--<i class="icon icon-arrow-down3"></i>
 													<select name="people"  class="form-control" id="person"/>
 														<option value="#">1</option>
 														<option value="#">2</option>
 														<option value="#">3</option>
 														<option value="#">4</option>
 														<option value="#">5+</option>
-													</select>
+													</select>-->
 												</div>
 											</div>
 										</div>
