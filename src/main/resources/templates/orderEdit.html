@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Admin page</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <meta name="author" content="" />
+
+            <!-- Facebook and Twitter integration -->
+            <meta property="og:title" content=""/>
+            <meta property="og:image" content=""/>
+            <meta property="og:url" content=""/>
+            <meta property="og:site_name" content=""/>
+            <meta property="og:description" content=""/>
+            <meta name="twitter:title" content="" />
+            <meta name="twitter:image" content="" />
+            <meta name="twitter:url" content="" />
+            <meta name="twitter:card" content="" />
+
+
+            <link rel="stylesheet" th:href="@{/css/animate.css}">
+
+            <link rel="stylesheet" th:href="@{/css/icomoon.css}">
+
+            <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+            <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+            <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
+
+            <link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+
+            <link rel="stylesheet" th:href="@{/css/flexslider.css}">
+
+            <link rel="stylesheet" th:href="@{/fonts/flaticon.css}">
+
+            <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker.css}">
+
+            <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+        <div class="colorlib-table-cell js-fullheight">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
+                        <button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul>
+                        <li><a th:href="@{about}">Home</a></li>
+                        <li><a th:href="@{menu}">Menu</a></li>
+                        <li><a th:href="@{specialties}">Specialties</a></li>
+                        <li class="active"><a th:href="@{reservation}">Reservation</a></li>
+                        <li><a th:href="@{blog}">Blog</a></li>
+                        <li ><a th:href="@{index}">About us</a></li>
+                        <li><a th:href="@{contact}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <p>
+        <a href="/reservation" th:href="@{/}">Reservation</a>
+        <a href="/about" th:href="@{index}">Aboout us</a>
+        <a href="/menu" th:href="@{menu}">Menu</a>
+        <a href="/orderlist" th:href="@{orderlist}">Back</a>
+    </p>
+
+    <h1>Orders</h1>
+
+    <form class="form-group" action="/orderEdit" th:action="@{/orderEdit}" method="post">
+        <input th:type="hidden" name="id" th:field="${order.id_reserve}" />
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" th:field="${order.name}" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" th:field="${order.email}">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input class="form-control" id="phone" th:field="${order.phone}">
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input class="form-control" id="date" th:field="${order.date}">
+        </div>
+        <div class="form-group">
+            <label for="person">Person</label>
+            <input class="form-control" id="person" th:field="${order.person}">
+        </div>
+        <button type="submit"  class="btn btn-primary">Save</button>
+        <a href="#"  class="btn btn-danger" role="button">Cancel</a>
+    </form>
+
+</div>
+
+</body>
+</html>

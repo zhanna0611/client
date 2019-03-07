@@ -1,4 +1,4 @@
-package restaurant.controller;
+package restaurant.model;
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Pattern;
@@ -16,7 +16,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_reserve;
+    private long id_reserve;
     @NotEmpty (message="Name is required")
     private String name;
     @NotEmpty (message="Email is required")
@@ -29,5 +29,45 @@ public class Order {
     private String date;
 
     private String person;
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getID() {
+        return id_reserve;
+    }
+
+    public void setID(Long id_reserve) {
+        this.id_reserve = id_reserve;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
+
