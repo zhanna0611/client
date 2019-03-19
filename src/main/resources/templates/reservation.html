@@ -78,6 +78,7 @@
 							<li><a th:href="@{blog}">Blog</a></li>
 							<li ><a th:href="@{index}">About us</a></li>
 							<li><a th:href="@{contact}">Contact</a></li>
+							<li><a th:href="@{orderlist}">AdminPage</a></li>
 						</ul>
 					</div>
 				</div>
@@ -91,7 +92,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo" href="index.html"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a>
+							<a class="colorlib-logo" th:href="@{login}"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a>
 						</div>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 					</div>
@@ -110,7 +111,7 @@
 				   					<div class="desc">
 				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
 					   					<h1>Reservation</h1>
-					   					<p><span><a href="#">Home</a></span> <span>Reservation</span></p>
+										<p><span><a  th:href="@{login}">Login</a></span> <span><a th:href="@{register}">Registration</a></span></p>
 					   					<div class="desc2"></div>
 				   					</div>
 				   				</div>

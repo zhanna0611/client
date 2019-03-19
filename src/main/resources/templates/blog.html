@@ -87,14 +87,14 @@
 			</div>
 		</div>
 	</nav>
-	
+
 	<div id="colorlib-page">
 		<header>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo" th:href="@{index}"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a>
+							<a class="colorlib-logo" th:href="@{login}"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a>
 						</div>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 					</div>
@@ -104,25 +104,25 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li th:style="${'background-image: url('''  + '/images/img_bg_1.jpg'');'}" data-stellar-background-ratio="0.5">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
-				   				<div class="slider-text-inner text-center">
-				   					<div class="desc">
-				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
-					   					<h1>Blog</h1>
-					   					<p><span><a href="#">Home</a></span> <span>Blog</span></p>
-					   					<div class="desc2"></div>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
+					<li th:style="${'background-image: url('''  + '/images/chef-2.jpg'');'}"  data-stellar-background-ratio="0.5">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+									<div class="slider-text-inner text-center">
+										<div class="desc">
+											<span class="icon"><i class="flaticon-cutlery"></i></span>
+											<h1>Reservation</h1>
+											<p><span><a  th:href="@{login}">Login</a></span> <span><a th:href="@{register}">Registration</a></span></p>
+											<div class="desc2"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</aside>
 
 		<div class="colorlib-intro">
