@@ -2,37 +2,221 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="645a9924-9bb9-451a-a785-463a2e00fd01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_197.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/model/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/config/OrderProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/ErrorPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/entity/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/entity/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/repository/TacoCloudClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/repository/TacoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/utils/EncryptedPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/restaurant/utils/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userInfoPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/welcomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af3c8c52-db90-46c4-8cde-e8259a8d9aac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/af3c8c52-db90-46c4-8cde-e8259a8d9aac.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_3_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/RestaurantApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/RestaurantApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/controller/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/controller/Reserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/flexslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/icomoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/icomoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/bootstrap/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/Flaticon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/Flaticon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/_flaticon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/_flaticon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/flaticon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/flaticon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/flaticon/font/flaticon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap-datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap-datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/google_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/google_map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/magnific-popup-options.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/magnific-popup-options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_button-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_button-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_code.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_component-animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_component-animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_dropdowns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_dropdowns.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_glyphicons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_glyphicons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_input-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_input-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_jumbotron.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_navs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_navs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_pager.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_pager.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_popovers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_popovers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_print.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_progress-bars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_progress-bars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_responsive-utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_responsive-utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_scaffolding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_wells.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_wells.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_border-radius.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_gradients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_grid-framework.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_responsive-visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_responsive-visibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_vendor-prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sass/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orderEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/orderEdit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orderlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/orderlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/specialties.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/specialties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restaurant/HomeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restaurant/HomeControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/BlogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/controller/Reserve.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/controller/Reserve.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/exception/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/repository/OrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/security/RegistrationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurant/security/RegistrationForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/security/UserRepositoryUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/restaurant/service/UserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/flexslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/icomoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/icomoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/bootstrap/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/Flaticon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/Flaticon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/_flaticon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/_flaticon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/flaticon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/flaticon.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/flaticon/font/flaticon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/icomoon/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/icomoon/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap-datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap-datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/google_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/google_map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/magnific-popup-options.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/magnific-popup-options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_button-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_button-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_code.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_component-animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_component-animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_dropdowns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_dropdowns.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_glyphicons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_glyphicons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_input-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_input-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_jumbotron.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_navs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_navs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_pager.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_pager.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_popovers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_popovers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_print.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_progress-bars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_progress-bars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_responsive-utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_responsive-utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_scaffolding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_wells.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/bootstrap/_wells.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_border-radius.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_gradients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_grid-framework.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_responsive-visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_responsive-visibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/mixins/_vendor-prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sass/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/orderEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/orderEdit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/orderlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/orderlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/reservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reservation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/specialties.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/specialties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-restaurant.RestaurantApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-restaurant.RestaurantApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/restaurant.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant/HomeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant/HomeControllerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,6 +252,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="Restaurant: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Restaurant@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Restaurant: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -76,8 +267,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="-50">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/TacoCloudClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="61" column="69" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,62 +291,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="37" column="1" lean-forward="true" selection-start-line="14" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="35" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="225">
+              <caret line="15" column="44" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="15" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,30 +313,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reservation.html">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-460">
-              <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="71" column="1" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="71" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -180,18 +324,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="86">
+              <caret line="32" column="45" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1803#1804#0" expanded="true" />
-                <element signature="e#1830#1831#0" expanded="true" />
-                <element signature="e#1877#1878#0" expanded="true" />
-                <element signature="e#1904#1905#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/entity/AppUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/entity/UserRole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="225" selection-start-line="225" selection-end-line="225" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,6 +390,10 @@
       <find>registration</find>
       <find>user</find>
       <find>&lt;FORM</find>
+      <find>H2</find>
+      <find>login</find>
+      <find>Reserva</find>
+      <find>logi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -223,57 +402,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/Order1Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ordershow.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/order.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/orderEdit.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/orderlist.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/EnableWebSecurity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/MyAccessDeniedHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/model/User.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepositoryUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/PasswordEncoder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/registrationForm.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/SecurityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/model/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/UserRegistrationDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/FieldMatch.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/UserRegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/model/UserDto.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/model/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/validator/UserValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/service/SecurityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/about.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/menu.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/contact.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/blog.html" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/entity/AppRole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/entity/AppUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/entity/UserRole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/dao/AppRoleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/dao/AppUserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/_menu.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/logout.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userInfoPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/welcomePage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/security/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/403Page.html" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/ErrorPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/reservation.html" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/TacoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/Reserve.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/model/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/OrderProps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/utils/EncryptedPasswordUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/utils/WebUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/TacoCloudClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
         <option value="$PROJECT_DIR$/src/main/java/restaurant/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/restaurant/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java" />
       </list>
     </option>
   </component>
@@ -285,9 +464,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="74" />
-    <option name="y" value="26" />
-    <option name="width" value="1328" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
     <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -298,35 +476,34 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -334,7 +511,7 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -343,7 +520,7 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -352,16 +529,16 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restaurant" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -370,7 +547,7 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -379,7 +556,7 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -388,7 +565,7 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -397,23 +574,59 @@
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart-restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-restaurant 3" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,7 +638,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552999727334" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555410498567" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -435,7 +648,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -500,7 +713,14 @@
       <workItem from="1551931306645" duration="276000" />
       <workItem from="1551953425459" duration="492000" />
       <workItem from="1552833541504" duration="1231000" />
-      <workItem from="1552898576998" duration="20421000" />
+      <workItem from="1552898576998" duration="24405000" />
+      <workItem from="1553583543421" duration="11995000" />
+      <workItem from="1554192901865" duration="326000" />
+      <workItem from="1554727900945" duration="92000" />
+      <workItem from="1554728222833" duration="4731000" />
+      <workItem from="1554969577462" duration="5386000" />
+      <workItem from="1555182061778" duration="28000" />
+      <workItem from="1555341249468" duration="18212000" />
     </task>
     <task id="LOCAL-00001" summary="add new controller for home-controller">
       <created>1549881434161</created>
@@ -520,7 +740,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116697000" />
+    <option name="totallyTimeSpent" value="161451000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,10 +752,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="26" width="1328" height="813" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8448276" visible="true" weight="0.22861587" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8448276" visible="true" weight="0.23032904" />
       <window_info id="Structure" order="1" sideWeight="0.15289256" side_tool="true" weight="0.17728531" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -545,7 +765,7 @@
       <window_info id="Web" order="7" sideWeight="0.15517241" side_tool="true" weight="0.1846722" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40499306" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3855756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994452" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -560,18 +780,18 @@
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32871014" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32871014" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2496112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.19595645" />
+      <window_info anchor="right" id="Database" order="6" weight="0.05598756" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.031394277" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8448276" visible="true" weight="0.22861587" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8448276" visible="true" weight="0.22460657" />
       <window_info id="Structure" order="1" sideWeight="0.15289256" side_tool="true" weight="0.17728531" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -581,7 +801,7 @@
       <window_info id="Web" order="7" sideWeight="0.15517241" side_tool="true" weight="0.1846722" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40499306" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3855756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994452" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -596,12 +816,12 @@
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32871014" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32871014" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2496112" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.19595645" />
+      <window_info anchor="right" id="Database" order="6" weight="0.05598756" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.031394277" />
@@ -616,61 +836,261 @@
     <MESSAGE value="Validation done" />
     <option name="LAST_COMMIT_MESSAGE" value="Validation done" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_dropdowns.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="-180">
+          <caret line="182" column="3" selection-start-line="182" selection-start-column="3" selection-end-line="182" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/PasswordEncoder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/sass/bootstrap/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="153">
+          <caret line="197" column="3" selection-start-line="197" selection-start-column="3" selection-end-line="197" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/Message.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/ГыукКупшыекфешщтСщтекщддук.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/WebSecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userInfoPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/FieldMatch.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/UserRegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/welcomePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#182#188#0" expanded="true" />
+            <element signature="e#241#247#0" expanded="true" />
+            <element signature="e#293#299#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/UserRegistrationDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/403Page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="390" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="97" column="95" lean-forward="true" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="254" column="44" selection-start-line="254" selection-start-column="44" selection-end-line="254" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reservation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="186" column="89" selection-start-line="186" selection-start-column="73" selection-end-line="186" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/BlogController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/Reserve.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.4.RELEASE/spring-beans-5.1.4.RELEASE.jar!/org/springframework/beans/factory/support/ConstructorResolver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="601" selection-start-line="601" selection-end-line="601" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="78" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="193" column="48" selection-start-line="193" selection-start-column="52" selection-end-line="195" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/RestaurantApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/entity/AppRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/OrderProps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="82" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/SpecialtitesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="32" />
+          <folding>
+            <element signature="e#0#1121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/utils/EncryptedPasswordUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="19" />
+          <folding>
+            <element signature="e#0#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/utils/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="31" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -688,143 +1108,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/validator/UserValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2098#2099#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="100" column="50" selection-start-line="100" selection-start-column="50" selection-end-line="100" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/SecurityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="766" selection-start-line="766" selection-end-line="766" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/RestaurantApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/SpecialtitesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/UserRepositoryUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="23" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -832,6 +1129,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/UserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/TacoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
@@ -841,231 +1148,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/SecurityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/service/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/ErrorPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/ContactController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/orderlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1808">
-          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/orderEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="120" column="26" lean-forward="true" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contact.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/Reserve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+        <state relative-caret-position="165">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/blog.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/TacoCloudClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="98">
+          <caret line="61" column="69" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/security/RegistrationForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="71" selection-end-column="1" />
+        <state relative-caret-position="105">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reservation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        <state relative-caret-position="103">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="86">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1830#1831#0" expanded="true" />
-            <element signature="e#1877#1878#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/entity/AppUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="-138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/entity/UserRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="14" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="238">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="-50">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restaurant/repository/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="15" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

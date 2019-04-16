@@ -1,8 +1,11 @@
 package restaurant.model;
+
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Pattern;
+import restaurant.model.Order;
 import org.hibernate.validator.constraints.CreditCardNumber;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -17,18 +20,19 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_reserve;
-    @NotEmpty (message="Name is required")
+    @NotEmpty(message = "Name is required")
     private String name;
-    @NotEmpty (message="Email is required")
+    @NotEmpty(message = "Email is required")
     @Size(min = 1, max = 100)
 
     private String email;
-    @Digits(integer=11, fraction=0, message="Phone number should contain 11 numbers")
+    @Digits(integer = 11, fraction = 0, message = "Phone number should contain 11 numbers")
     private String phone;
-    @NotBlank(message="Date is required")
+    @NotBlank(message = "Date is required")
     private String date;
 
     private String person;
+
     public String getName() {
         return name;
     }
@@ -69,5 +73,9 @@ public class Order {
     public void setDate(String date) {
         this.date = date;
     }
+
+//    public void addDesign(Order reservation) {
+//        this.order.add(reservation);
+//    }
 }
 

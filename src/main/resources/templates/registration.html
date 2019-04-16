@@ -3,14 +3,6 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Restaurant System</title>
-</head>
-<body>
-<h1>Register</h1>
-
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Luto Template</title>
@@ -83,7 +75,7 @@
                         <li><a th:href="@{about}">Home</a></li>
                         <li><a th:href="@{menu}">Menu</a></li>
                         <li><a th:href="@{specialties}">Specialties</a></li>
-                        <li class="active"><a th:href="@{reservation}">Registration</a></li>
+                        <li class="active"><a th:href="@{reservation}">Reservation</a></li>
                         <li><a th:href="@{blog}">Blog</a></li>
                         <li ><a th:href="@{index}">About us</a></li>
                         <li><a th:href="@{contact}">Contact</a></li>
@@ -117,7 +109,7 @@
                                 <div class="slider-text-inner text-center">
                                     <div class="desc">
                                         <span class="icon"><i class="flaticon-cutlery"></i></span>
-                                        <h1>Reservation</h1>
+                                        <h1>Registration</h1>
                                         <p><span><a  th:href="@{login}">Login</a></span> <span><a th:href="@{register}">Registration</a></span></p>
                                         <div class="desc2"></div>
                                     </div>
@@ -179,8 +171,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
-                    <h2>Make A Reservation</h2>
-                    <p>Please write all information in below for making a resservation!</p>
+                    <h2>Registration Page</h2>
+                    <p>Please write all information in below for making a registration!</p>
                 </div>
             </div>
             <div class="row">
@@ -194,8 +186,10 @@
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <div class="form-field">
-                                                <input type="text" class="form-control" id="username" th:field="*{username}"/>
-
+                                                <input type="text" class="form-control" th:field="*{username}"/>
+                                                <!--<span style="color:red;" class="validationError"-->
+                                                      <!--th:if="${#fields.hasErrors('username')}"-->
+                                                      <!--th:errors="*{username}">Username Error</span>-->
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +197,7 @@
                                         <div class="form-group">
                                             <label for="name">Name</label>
                                             <div class="form-field">
-                                                <input type="text" class="form-control" id="name" th:field="*{name}"/>
+                                                <input type="text" class="form-control"  th:field="*{name}"/>
 
                                             </div>
                                         </div>
@@ -212,8 +206,10 @@
                                         <div class="form-group">
                                             <label for="password">Password</label>
                                             <div class="form-field">
-                                                <input type="text" class="form-control" id="password" th:field="*{password}"/>
-
+                                                <input type="password" class="form-control" id="password" th:field="*{password}"/>
+                                                <!--<span style="color:red;" class="validationError"-->
+                                                      <!--th:if="${#fields.hasErrors('password')}"-->
+                                                      <!--th:errors="*{password}">Password Error</span>-->
                                             </div>
                                         </div>
                                     </div>
@@ -227,18 +223,11 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 animate-box">
-                                        <div class="form-group">
-                                            <label for="role">Role</label>
-                                            <div class="form-field">
-                                                <input type="text" class="form-control" id="role" th:field="*{role}"/>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="col-md-12 animate-box">
                                         <div class="row">
                                             <div class="col-md-4 col-md-offset-4">
-                                                <input type="submit"  name="submit" id="submit" value="Registration" class="btn btn-primary btn-block"/>
+                                                <input type="button" onsubmit="saveUser()" name="submit" id="submit" value="Registration" class="btn btn-primary btn-block"/>
                                             </div>
                                         </div>
                                     </div>
@@ -351,4 +340,3 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </body>
 </html>
-
