@@ -1,5 +1,6 @@
 package restaurant.controller;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -23,26 +24,35 @@ public class RegistrationController {
 
     private TacoCloudClient tacoCloudClient;
     private UserRepository userRepository;
-    //private PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     public RegistrationController(
             TacoCloudClient tacoCloudClient,
-            UserRepository userRepository) {
+            UserRepository userRepository,
+            PasswordEncoder passwordEncoder) {
         this.tacoCloudClient = tacoCloudClient;
         this.userRepository = userRepository;
+        this.passwordEncoder=passwordEncoder;
     }
 
     @GetMapping
-    public String registerForm(Model model) {
+    public String registerForm(Model model){
         model.addAttribute("user", new User());
         return "registration";
     }
 
+
+
     @PostMapping
-    public String processRegistration(User user) {
-//        System.out.println("form = " + form);
+    public String processRegistration(RegistrationForm form) {
+        System.out.println("form = " + form);
+
         //System.out.println("form.toUser(passwordEncoder) = " + form.toUser());
+        User user = form.toUser(passwordEncoder);
+        System.out.println("form = " + form);
+
         tacoCloudClient.saveUser(user);
+        //tacoCloudClient.saveUser(form);
 
         return "redirect:/login";
     }

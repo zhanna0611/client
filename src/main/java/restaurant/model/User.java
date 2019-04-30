@@ -24,6 +24,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 //import org.springframework.security.core.GrantedAuthority;
 //import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -34,15 +36,44 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class User {
     private static final long serialVersionUID = 1L;
+    String ROLE_PREFIX = "ROLE_";
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private final String username;
 
-    private final String name;
+//    private final String name;
     private final String password;
-    private final String phoneNumber;
+//    private final String phoneNumber;
+    @NotEmpty(message="Role is required")
+    private final String role;
 
 
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Arrays.asList(new SimpleGrantedAuthority(ROLE_PREFIX+role));
+    }
+
+
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+
+    public boolean isEnabled() {
+        return true;
+    }
 }
+

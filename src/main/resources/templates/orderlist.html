@@ -90,12 +90,12 @@
     <table class="table" border="2">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Date</th>
-            <th>Person</th>
+            <th><a th:href="@{/orderBy/{id_reserve}}">Id</a></th>
+            <th><a th:href="@{/orderBy/{name}}">Name</a></th>
+            <th><a th:href="@{/orderBy/{email}}">Email</a></th>
+            <th><a th:href="@{/orderBy/{phone}}">Phone</a></th>
+            <th><a th:href="@{/orderBy/{date}}">Date</a></th>
+            <th><a th:href="@{/orderBy/{person}}">Person</a></th>
             <th>Changes</th>
         </tr>
         </thead>
@@ -114,6 +114,13 @@
         </tr>
         </tbody>
     </table>
+    <button><a th:href="@{/page/{previous}}">Previous</a></button>
+    <button><a th:href="@{/page/{next}}">Next</a></button>
+
+    <br/><h3>Choose number of items</h3>
+    <a th:href="@{/size/{five}}">5</a>
+    <a th:href="@{/size/{ten}}">10</a>
+    <a th:href="@{/size/{twenty}}">20</a>
 </div>
 
 <!-- jQuery -->

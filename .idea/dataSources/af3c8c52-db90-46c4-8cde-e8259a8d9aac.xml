@@ -1108,72 +1108,233 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="278" parent="2" name="Order"/>
-    <table id="279" parent="2" name="user"/>
-    <column id="280" parent="278" name="id_reserve">
+    <table id="279" parent="2" name="app_role">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="280" parent="2" name="app_user">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="281" parent="2" name="hibernate_sequence">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="282" parent="2" name="orders">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="283" parent="2" name="user"/>
+    <table id="284" parent="2" name="user_role">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="285" parent="278" name="id_reserve">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="278" name="name">
+    <column id="286" parent="278" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="278" name="email">
+    <column id="287" parent="278" name="email">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="278" name="phone">
+    <column id="288" parent="278" name="phone">
       <Position>4</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="278" name="date">
+    <column id="289" parent="278" name="date">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="278" name="person">
+    <column id="290" parent="278" name="person">
       <Position>6</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="278" name="PRIMARY">
+    <key id="291" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_reserve</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="287" parent="279" name="id">
+    <column id="292" parent="279" name="role_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="279" name="username">
+    <column id="293" parent="279" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="294" parent="279" name="APP_ROLE_UK">
+      <ColNames>role_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="295" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="296" parent="279" name="APP_ROLE_UK">
+      <ColNames>role_name</ColNames>
+      <UnderlyingIndexName>APP_ROLE_UK</UnderlyingIndexName>
+    </key>
+    <column id="297" parent="280" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="280" name="enabled">
+      <Position>2</Position>
+      <DataType>bit(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="280" name="encryted_password">
+      <Position>3</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="280" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(36)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="301" parent="280" name="APP_USER_UK">
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="302" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="303" parent="280" name="APP_USER_UK">
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>APP_USER_UK</UnderlyingIndexName>
+    </key>
+    <column id="304" parent="281" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="282" name="id_reserve">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="282" name="date">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="307" parent="282" name="email">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="282" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="282" name="person">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="282" name="phone">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="311" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_reserve</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="312" parent="283" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="283" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="279" name="password">
+    <column id="314" parent="283" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="279" name="role_id">
+    <column id="315" parent="283" name="role">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="291" parent="279" name="PRIMARY">
+    <key id="316" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <column id="317" parent="284" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="318" parent="284" name="role_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="319" parent="284" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="320" parent="284" name="USER_ROLE_UK">
+      <ColNames>user_id
+role_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="321" parent="284" name="FKp6m37g6n6c288s096400uw8fw">
+      <ColNames>role_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="322" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="323" parent="284" name="USER_ROLE_UK">
+      <ColNames>user_id
+role_id</ColNames>
+      <UnderlyingIndexName>USER_ROLE_UK</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
