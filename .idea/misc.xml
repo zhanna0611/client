@@ -4,10 +4,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/menu_service/pom.xml" />
+        <option value="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/order_details/pom.xml" />
+        <option value="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/Reservation_Order/pom.xml" />
+        <option value="$USER_HOME$/Downloads/CarRentService-master/discovery-server/pom.xml" />
+        <option value="$USER_HOME$/Downloads/eureka-master/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>

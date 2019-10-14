@@ -18,12 +18,13 @@ import java.util.Map;
 
 public class TacoCloudClient {
 
-    public List<Order> getAllOrder() {
+    public ArrayList<Order> getAllOrder() {
         try {
             RestTemplate rest = new RestTemplate();
 
+//            return rest.exchange("http://localhost:8081/teachers/ps?orderBy=name&direction=DESC&page=0&size=5",
             return rest.exchange("http://localhost:8080/orderlist",
-                    HttpMethod.GET, null, new ParameterizedTypeReference<List<Order>>() {
+                    HttpMethod.GET, null, new ParameterizedTypeReference<ArrayList<Order>>() {
                     })
                     .getBody();
         } catch (Exception e) {
@@ -32,6 +33,7 @@ public class TacoCloudClient {
         }
         return null;
     }
+
 
     public Order saveOrder(Order order) {
         try {
@@ -99,8 +101,9 @@ public class TacoCloudClient {
 //            e.printStackTrace();
 //        }
 //    }
-    public void deleteById(long id_reserve) {
+    public void deleteById(Long id_reserve) {
     try {
+        System.out.println();
         RestTemplate rest = new RestTemplate();
         rest.delete("http://localhost:8080/orderDelete/{id_reserve}",
                 id_reserve);
@@ -111,7 +114,7 @@ public class TacoCloudClient {
 }
 
 
-    public Order findById(long id_reserve) {
+    public Order findById(Long id_reserve) {
         try {
             RestTemplate rest = new RestTemplate();
 //            Map<String, Long> urlVariables = new HashMap<>();

@@ -85,7 +85,41 @@
         <a href="/menu" th:href="@{menu}">Menu</a>
         <a href="/orderlist" th:href="@{orderlist}">Back</a>
     </p>
-
+    <!--<nav aria-label="Page navigation example">-->
+        <!--<div th:fragment='paginationbar'>-->
+            <!--<div class="text-center">-->
+                <!--<ul class='pagination pagination-centered'>-->
+                    <!--<li class="page-item" th:class="${page.firstPage}?'page-link disabled' :''">-->
+                        <!--<span th:if='${page.firstPage}'>First</span>-->
+                        <!--<a class="page-link" th:if='${not page.firstPage}' th:href='@{${page.url}(page=0,size=${page.size})}'>First</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-item" th:class="${page.hasPreviousPage}? '' : 'disabled, page-link'">-->
+                        <!--<span th:if='${not page.hasPreviousPage}'> « </span>-->
+                        <!--<a class="page-link" th:if='${page.hasPreviousPage}'-->
+                           <!--th:href='@{${page.url}(page=${page.number-2},size=${page.size})}'-->
+                           <!--title='Go to previous page'> « </a>-->
+                    <!--</li>-->
+                    <!--<li class="page-item active" th:each='item : ${page.items}' th:class="${item.current}? 'active, page-item active' : ''">-->
+                        <!--<span class="page-link" th:if='${item.current}' th:text='${item.number}'>(current)</span>-->
+                        <!--<a class="page-link" th:if='${not item.current}'-->
+                           <!--th:href='@{${page.url}(page=${item.number-1},size=${page.size})}'>-->
+                            <!--<span th:text='${item.number}'>(current)</span></a>-->
+                    <!--</li>-->
+                    <!--<li class="page-item" th:class="${page.hasNextPage}? '' : 'disabled, page-link'">-->
+                        <!--<span th:if='${not page.hasNextPage}'> » </span>-->
+                        <!--<a class="page-link" th:if='${page.hasNextPage}'-->
+                           <!--th:href='@{${page.url}(page=${page.number},size=${page.size})}'-->
+                           <!--title='Go to next page'> » </a>-->
+                    <!--</li>-->
+                    <!--<li class="page-item" th:class="${page.lastPage}? 'page-link disabled' : ''">-->
+                        <!--<span th:if='${page.lastPage}'>Last</span>-->
+                        <!--<a class="page-link" th:if='${not page.lastPage}'-->
+                           <!--th:href='@{${page.url}(page=${page.totalPages - 1},size=${page.size})}'>Last</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
 
     <table class="table" border="2">
         <thead>

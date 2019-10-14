@@ -2,5 +2,10 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/CarRentService-master/discovery-server" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/eureka-master" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/Reservation_Order" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/menu_service" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/order_details" charset="UTF-8" />
   </component>
 </project>

@@ -2,12 +2,15 @@ package restaurant.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import restaurant.model.Order;
+import restaurant.repository.OrderRepository;
 import restaurant.repository.TacoCloudClient;
 
 import javax.validation.Valid;
@@ -18,22 +21,22 @@ import java.util.HashMap;
 @RequestMapping("/")
 public class OrderController {
 
-
-    private PasswordEncoder passwordEncoder;
+//    private OrderRepository orderRepository;
+//    private PasswordEncoder passwordEncoder;
     HashMap<String ,String> direction = new HashMap<>();
     String orderBy;
     int page=0;
     int size=5;
-    public OrderController(
-            PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
-        direction.put("id_reserve","ASC");
-        direction.put("date","ASC");
-        direction.put("email","ASC");
-        direction.put("name","ASC");
-        direction.put("person","ASC");
-        direction.put("phone","ASC");
-    }
+//    public OrderController()
+//            PasswordEncoder passwordEncoder) {
+////        this.passwordEncoder = passwordEncoder;
+////        direction.put("id_reserve","ASC");
+////        direction.put("date","ASC");
+////        direction.put("email","ASC");
+////        direction.put("name","ASC");
+////        direction.put("person","ASC");
+////        direction.put("phone","ASC");
+
 
     @Autowired
     private TacoCloudClient tacoCloudClient= new TacoCloudClient();
@@ -82,12 +85,27 @@ public class OrderController {
 //    }
 
     @GetMapping("/orderlist")
-    public Iterable<Order> getAllOrders() {
+    public String getAllOrders(@ModelAttribute Order newOrder, Model model, Pageable pageable) {
 
-        return  tacoCloudClient.getAllOrder();
-
+//        return  tacoCloudClient.getAllOrder();
+        model.addAttribute("order", tacoCloudClient.getAllOrder());
+        return "orderlist";
+//        Page<Order> studPage = orderRepository.findAll(pageable);
+//        PageWrapper<Order> page = new PageWrapper<Order>(studPage, "/orderlist");
+//        model.addAttribute("orders", page.getContent());
+//        model.addAttribute("page", page);
+//// model.addAttribute("students", studentRepository.getAllStudents(pageable));
+//        return "orderlist";
     }
-
+//    public String studList(@ModelAttribute Order newOrder, Model model, Pageable pageable) {
+//
+//        Page<Order> studPage = orderRepository.findAll(pageable);
+//        PageWrapper<Order> page = new PageWrapper<Order>(studPage, "/orderlist");
+//        model.addAttribute("orders", page.getContent());
+//        model.addAttribute("page", page);
+//// model.addAttribute("students", studentRepository.getAllStudents(pageable));
+//        return "orderlist";
+//    }
 //
     @GetMapping("/")
      public String orderForm(Model model) {
@@ -117,7 +135,7 @@ public class OrderController {
         //return editTimetableRepository.findAll();
 //        model.addAttribute("edits", timetableClient.getAllTeachersOrderBy(orderBy));
 //        return "Edit_admin";
-
+        System.out.println("-------");
         orderBy = orderBy1.substring(1,orderBy1.length()-1);
 //        model.addAttribute("order", timetableClient.getAllTeachersOrderBy(orderBy));
         model.addAttribute("edit", new Order());
@@ -184,7 +202,7 @@ public class OrderController {
 
 
     }
-//
+
 //    @GetMapping
 //    public String ordersForUser(
 //            @AuthenticationPrincipal User user, Model model) {
@@ -197,7 +215,7 @@ public class OrderController {
 //    }
 
     @RequestMapping(value = {"/orderEdit", "/orderEdit/{id_reserve}"}, method = RequestMethod.GET)
-    public String orderEditForm(@PathVariable(required = false, name = "id_reserve") long id_reserve) {
+    public String orderEditForm(@PathVariable(required = false, name = "id_reserve") Long id_reserve) {
 
            tacoCloudClient.findById(id_reserve);
 

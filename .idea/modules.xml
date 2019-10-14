@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/menu_service/demo.iml" filepath="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/menu_service/demo.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/Reservation_Order/demo (1) (Reservation_Order).iml" filepath="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/Reservation_Order/demo (1) (Reservation_Order).iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/order_details/demo (1) (com.example).iml" filepath="$USER_HOME$/Downloads/spring-security-oauth-mysql-example-master/order_details/demo (1) (com.example).iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/CarRentService-master/discovery-server/discovery-server.iml" filepath="$USER_HOME$/Downloads/CarRentService-master/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/eureka-master/eureka.iml" filepath="$USER_HOME$/Downloads/eureka-master/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/restaurant.iml" filepath="$PROJECT_DIR$/restaurant.iml" />
     </modules>
   </component>
